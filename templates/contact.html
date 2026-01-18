@@ -1,0 +1,43 @@
+{% extends 'base.html' %}
+
+{% block title %}Contact Us | Radio Consultant Service{% endblock %}
+
+{% block content %}
+<section class="page-header">
+    <div class="container">
+        <h1>Get In Touch</h1>
+        <p>Have a project in mind? We'd love to hear from you.</p>
+    </div>
+</section>
+
+<section class="contact-section">
+    <div class="container">
+        <div class="grid">
+            <div class="contact-info card">
+                <h3>Contact Information</h3>
+                <p><strong>Email:</strong> info@radioconsultant.com</p>
+                <p><strong>Phone:</strong> +1 (555) 123-4567</p>
+                <p><strong>Address:</strong> 123 Broadcast Plaza, Radio City, NY</p>
+            </div>
+            <div class="contact-form card">
+                <form action="#" method="POST">
+                    {% csrf_token %}
+                    <div style="margin-bottom: 15px;">
+                        <input type="text" placeholder="Your Name"
+                            style="width: 100%; padding: 10px; border-radius: 5px; border: 1px solid #ddd;">
+                    </div>
+                    <div style="margin-bottom: 15px;">
+                        <input type="email" placeholder="Your Email"
+                            style="width: 100%; padding: 10px; border-radius: 5px; border: 1px solid #ddd;">
+                    </div>
+                    <div style="margin-bottom: 15px;">
+                        <textarea placeholder="Your Message" rows="5"
+                            style="width: 100%; padding: 10px; border-radius: 5px; border: 1px solid #ddd;"></textarea>
+                    </div>
+                    <button type="submit" class="btn">Send Message</button>
+                </form>
+            </div>
+        </div>
+    </div>
+</section>
+{% endblock %}
